@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    // Target & module system (modern)
+    "target": "ES2022",
+    "module": "node20",
+    "moduleResolution": "node16",
+
+    // Enable JS files typechecking
+    "allowJs": true,
+    "checkJs": false,
+
+    // Do not emit from this config (use build tool or separate tsconfig.build.json)
+    "noEmit": true,
+
+    // Strict typing enabled
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "alwaysStrict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "useUnknownInCatchVariables": true,
+
+    // Interop & module conveniences
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+
+    // Type resolution & libs
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": false,
+    "typeRoots": ["./types", "./node_modules/@types"],
+    "lib": ["ES2022"]
+  },
+
+  // Adjust includes to cover JS/TS sources and JSDoc-annotated files
+  "include": ["src/**/*"],
+
+  "exclude": ["node_modules", "dist", "build"]
+}

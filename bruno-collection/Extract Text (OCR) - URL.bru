@@ -1,0 +1,32 @@
+meta {
+  name: Extract Text (OCR) - URL
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/api/ocr/extract-text
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "imageUrl": "https://github.com/EthanPintoA/itis-6177-final-project/blob/main/assets/{{imageName}}.webp?raw=true",
+    "language": "en",
+    "includeBoundingPolygons": {{includeBoundingPolygons}}
+  }
+  
+}
+
+vars:pre-request {
+  imageName: testocr1
+  includeBoundingPolygons: false
+  ~includeBoundingPolygons: true
+  ~imageName: testocr2
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

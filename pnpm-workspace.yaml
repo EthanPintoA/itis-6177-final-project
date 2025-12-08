@@ -1,0 +1,17 @@
+packages:
+  - "**"
+
+minimumReleaseAge: 10080 # minutes (7 days)
+
+# Enforce provenance / trust no-downgrade
+trustPolicy: no-downgrade
+
+# # Lock down install scripts to a tiny allow-list
+# onlyBuiltDependencies:
+#   - esbuild@0.25.1
+#   - sharp@0.33.5
+#   - prisma@6.2.1
+#   - "@swc/core@1.7.36"
+#   - "cypress@13.15.0"
+
+strictDepBuilds: true

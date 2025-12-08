@@ -1,0 +1,55 @@
+{
+  "name": "itis-6177-final-project-azure-ocr-gateway",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Async Node/Express gateway API over Azure AI Vision OCR.",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=24.11.0"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "fmt": "prettier --write ."
+  },
+  "keywords": [
+    "azure",
+    "ocr",
+    "vision",
+    "image-analysis",
+    "express",
+    "api"
+  ],
+  "author": "Ethan Pinto",
+  "type": "module",
+  "dependencies": {
+    "@azure-rest/ai-vision-image-analysis": "1.0.0-beta.3",
+    "@azure/core-auth": "1.10.1",
+    "cors": "2.8.5",
+    "dotenv": "17.2.3",
+    "express": "5.1.0",
+    "helmet": "8.1.0",
+    "morgan": "1.10.1",
+    "multer": "2.0.2",
+    "zod": "4.1.13"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.1",
+    "@eslint/json": "0.14.0",
+    "@types/cors": "2.8.19",
+    "@types/express": "5.0.5",
+    "@types/morgan": "1.9.10",
+    "@types/multer": "2.0.0",
+    "eslint": "9.39.1",
+    "globals": "16.5.0",
+    "nodemon": "3.1.11",
+    "prettier": "3.7.3",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.48.0"
+  }
+}

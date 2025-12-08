@@ -1,0 +1,20 @@
+meta {
+  name: Extract Text (OCR) - File
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:3000/api/ocr/extract-text
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  file: @file(..\assets\testocr1.webp)
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
